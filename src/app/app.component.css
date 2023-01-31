@@ -1,0 +1,12 @@
+h1{
+  text-align: center;
+}
+
+.banner{
+  background-image:linear-gradient(to right, red, blue);
+}
+.banner-content{
+  text-align: center;
+  font-size: 40px;
+  padding: 20px;
+}
