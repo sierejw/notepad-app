@@ -1,1 +1,19 @@
-<p>create-note works!</p>
+<div class="form-container">
+
+  <form #createForm="ngForm" (ngSubmit)="onSubmit(createForm)">
+    <div class="input-wrapper">
+      <label> Title </label>
+      <div>
+        <input class="title-text" [ngModel]="note.title" name="title">
+      </div>
+      <label> Body </label>
+      <div>
+        <textarea class="body-text" [ngModel]="note.body" name="body"></textarea>
+      </div>
+      <div class="button-wrapper">
+        <button type="submit">Submit</button>
+        <button (click)="goToPage('home')">Cancel</button>
+      </div>
+    </div>
+  </form>
+</div>

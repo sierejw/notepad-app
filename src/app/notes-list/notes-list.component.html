@@ -1,5 +1,19 @@
-<p>notes-list works!</p>
-<nav>
-    <a (click)="goToPage('create-note')">Press to go to create-note component</a>
-</nav>
+<div class="list-shell">
+  <div>
+    <input type="text" placeholder="Filter"/>
+  </div>
+  <div>
+    <div class="note-container" *ngFor="let note of notesList">
+      <h1 class="note-title">{{note.title}}</h1>
+      <p class="note-body">{{note.body}}</p>
+      <button (click)="goToEdit('create-note', getThisId(note))">Edit</button>
+      <button (click)="delete(getThisId(note))">Delete</button>
+    </div>
+  </div>
+  <div>
+    <button class="nav-button" (click)="goToPage('create-note')">New Note</button>
+  </div>
+</div>
+
+
 
