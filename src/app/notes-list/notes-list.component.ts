@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Notes } from "../objects-and-api/notes";
 import { NotesService } from "../objects-and-api/notes.service";
 import { Router } from "@angular/router";
+import { FormsModule } from "@angular/forms";
 
 import { Observable } from "rxjs";
 
@@ -13,12 +14,14 @@ import { Observable } from "rxjs";
 export class NotesListComponent implements OnInit {
 
   notesList: Notes[];
+  searchText: string;
 
   constructor(private noteService: NotesService,
               private router: Router) { }
 
   ngOnInit(): void {
     this.generateNotesList();
+    this.searchText = '';
   }
 
   goToPage(pageName: string) {

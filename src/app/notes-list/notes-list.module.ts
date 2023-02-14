@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NotesListComponent } from "./notes-list.component";
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -10,8 +11,9 @@ import { NotesListComponent } from "./notes-list.component";
   exports:[
     NotesListComponent,
   ],
-  imports: [
-    CommonModule,
-  ]
+    imports: [
+        CommonModule,
+        FormsModule,
+    ]
 })
 export class NotesListModule { }
